@@ -784,6 +784,16 @@
 
             requestAnimationFrame(animation);
         }
+
+        // Click Sound Effect
+        const clickSound = new Audio('assets/imup.mp4');
+        
+        // Add click listener to all buttons and links (a tags)
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', () => {
+                clickSound.cloneNode().play().catch(e => console.log('Audio play failed:', e));
+            });
+        });
     </script>
 </body>
 
