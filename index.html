@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,42 +31,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
-        body { background-color: #121214; color: #f9fafb; font-family: 'Outfit', sans-serif; scroll-behavior: smooth; }
-        
+        body {
+            background-color: #121214;
+            color: #f9fafb;
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
         /* Language Toggle Logic */
-        .lang-id { display: none; }
-        .is-id .lang-en { display: none; }
-        .is-id .lang-id { display: block; }
-        span.lang-id { display: none; }
-        .is-id span.lang-en { display: none; }
-        .is-id span.lang-id { display: inline; }
-        
+        .lang-id {
+            display: none;
+        }
+
+        .is-id .lang-en {
+            display: none;
+        }
+
+        .is-id .lang-id {
+            display: block;
+        }
+
+        span.lang-id {
+            display: none;
+        }
+
+        .is-id span.lang-en {
+            display: none;
+        }
+
+        .is-id span.lang-id {
+            display: inline;
+        }
+
         /* Star Animation */
         @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1.1) rotate(15deg); }
+
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(0.8) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1) rotate(15deg);
+            }
         }
-        .star-sparkle { animation: twinkle 3s ease-in-out infinite; }
-        .delay-1 { animation-delay: 1s; }
-        .delay-2 { animation-delay: 2s; }
+
+        .star-sparkle {
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .delay-1 {
+            animation-delay: 1s;
+        }
+
+        .delay-2 {
+            animation-delay: 2s;
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-pink selection:text-dark">
 
     <!-- Sparkle Vectors (Background) -->
     <div class="fixed top-20 left-10 text-pink/40 star-sparkle text-2xl pointer-events-none z-0">✦</div>
     <div class="fixed top-40 right-20 text-pink/40 star-sparkle delay-1 text-3xl pointer-events-none z-0">✧</div>
     <div class="fixed bottom-20 left-32 text-pink/30 star-sparkle delay-2 text-xl pointer-events-none z-0">✦</div>
-    
+
     <!-- Header -->
     <header class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-card transition-all">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-2xl font-bold tracking-wide flex items-center gap-2 group">
                 Nadia<span class="text-pink group-hover:text-red transition-colors duration-300">.</span>
             </a>
-            
+
             <div class="flex items-center gap-6">
                 <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
                     <a href="#about" class="hover:text-pink transition-colors">
@@ -81,60 +123,85 @@
                         <span class="lang-en">Experience</span><span class="lang-id">Pengalaman</span>
                     </a>
                 </nav>
-                
+
                 <!-- Language Switcher -->
-                <button onclick="toggleLang()" class="flex items-center gap-2 bg-card border border-pink/30 rounded-full p-1 w-16 relative hover:shadow-glow-pink transition-all">
-                    <div id="lang-toggle-knob" class="w-6 h-6 bg-pink rounded-full absolute left-1 transition-transform duration-300 ease-in-out"></div>
-                    <span class="text-[10px] font-bold w-full text-right pr-2 text-gray-300 z-10" id="lang-indicator">EN</span>
+                <button onclick="toggleLang()"
+                    class="flex items-center gap-2 bg-card border border-pink/30 rounded-full p-1 w-16 relative hover:shadow-glow-pink transition-all">
+                    <div id="lang-toggle-knob"
+                        class="w-6 h-6 bg-pink rounded-full absolute left-1 transition-transform duration-300 ease-in-out">
+                    </div>
+                    <span class="text-[10px] font-bold w-full text-right pr-2 text-gray-300 z-10"
+                        id="lang-indicator">EN</span>
                 </button>
             </div>
         </div>
     </header>
 
     <main class="relative z-10 pt-28">
-        
+
         <!-- Hero Section -->
-        <section id="about" class="max-w-6xl mx-auto px-6 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12">
+        <section id="about"
+            class="max-w-6xl mx-auto px-6 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12">
             <div class="w-full md:w-3/5 space-y-6">
                 <div class="flex flex-wrap gap-3 mb-4">
-                    <span class="bg-card border border-pink/50 text-pink rounded-full px-4 py-1.5 text-xs font-semibold flex items-center gap-2 shadow-glow-pink">
+                    <span
+                        class="bg-card border border-pink/50 text-pink rounded-full px-4 py-1.5 text-xs font-semibold flex items-center gap-2 shadow-glow-pink">
                         <i class="fas fa-search-plus"></i> SQA Learner
                     </span>
-                    <span class="bg-card border border-pink/30 text-gray-300 rounded-full px-4 py-1.5 text-xs font-medium flex items-center gap-2">
+                    <span
+                        class="bg-card border border-pink/30 text-gray-300 rounded-full px-4 py-1.5 text-xs font-medium flex items-center gap-2">
                         <i class="fas fa-project-diagram text-pink"></i> System Designer
                     </span>
                 </div>
-                
+
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    <span class="lang-en">Hi, I'm Nadia Tambunan! Welcome to my <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">software engineering</span> journey. ✧</span>
-                    <span class="lang-id">Halo, aku Nadia Tambunan! Yuk, jelajahi perjalananku di dunia <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">Rekayasa Perangkat Lunak</span>. ✧</span>
+                    <span class="lang-en">Hi, I'm Nadia Tambunan! Welcome to my <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">software
+                            engineering</span> journey. ✧</span>
+                    <span class="lang-id">Halo, aku Nadia Tambunan! Yuk, jelajahi perjalananku di dunia <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">Rekayasa Perangkat
+                            Lunak</span>. ✧</span>
                 </h1>
-                
+
                 <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
-                    <span class="lang-en">Software Engineering student at Telkom University Purwokerto. Driven to design reliable systems and currently expanding my horizons into Software Quality Assurance (QA).</span>
-                    <span class="lang-id">Mahasiswi Software Engineering di Telkom University Purwokerto. Fokus mengembangkan sistem yang reliabel dan sedang mendalami Software Quality Assurance (QA).</span>
+                    <span class="lang-en">Software Engineering student at Telkom University Purwokerto. Driven to design
+                        reliable systems and currently expanding my horizons into Software Quality Assurance
+                        (QA).</span>
+                    <span class="lang-id">Mahasiswi Software Engineering di Telkom University Purwokerto. Fokus
+                        mengembangkan sistem yang reliabel dan sedang mendalami Software Quality Assurance (QA).</span>
                 </p>
-                
-                <div class="pt-4 flex gap-4">
-                    <a href="#projects" class="bg-red hover:bg-red/90 text-white px-6 py-3 rounded-2xl font-medium shadow-glow-red transition-all flex items-center gap-2">
+
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="bg-red hover:bg-red/90 text-white px-6 py-3 rounded-2xl font-medium shadow-glow-red transition-all flex items-center gap-2">
                         <span class="lang-en">View My Work</span><span class="lang-id">Lihat Karyaku</span>
                         <i class="fas fa-arrow-right text-sm"></i>
                     </a>
-                    <a href="#experience" class="bg-card border border-pink/30 hover:border-pink text-pink px-6 py-3 rounded-2xl font-medium hover:shadow-glow-pink transition-all">
+                    <a href="#experience"
+                        class="bg-card border border-pink/30 hover:border-pink text-pink px-6 py-3 rounded-2xl font-medium hover:shadow-glow-pink transition-all flex items-center gap-2">
+                        <i class="fas fa-route text-sm"></i>
                         <span class="lang-en">My Journey</span><span class="lang-id">Perjalananku</span>
+                    </a>
+                    <a href="#" target="_blank"
+                        class="bg-card border border-pink/30 hover:border-pink text-pink px-6 py-3 rounded-2xl font-medium hover:shadow-glow-pink transition-all flex items-center gap-2">
+                        <i class="fas fa-file-alt text-sm"></i>
+                        <span class="lang-en">ATS CV</span><span class="lang-id">CV ATS</span>
                     </a>
                 </div>
             </div>
-            
+
             <div class="w-full md:w-2/5 flex justify-center relative">
                 <!-- Decorative Elements -->
                 <div class="absolute top-0 right-10 text-pink text-2xl star-sparkle">✦</div>
                 <div class="absolute bottom-10 left-0 text-pink text-xl star-sparkle delay-1">✧</div>
-                
-                <div class="w-64 h-64 md:w-80 md:h-80 bg-card rounded-[3rem] rotate-3 border-2 border-pink/20 relative p-4 flex items-center justify-center overflow-hidden hover:rotate-0 transition-transform duration-500 hover:shadow-glow-pink-strong">
+
+                <div
+                    class="w-64 h-64 md:w-80 md:h-80 bg-card rounded-[3rem] rotate-3 border-2 border-pink/20 relative p-4 flex items-center justify-center overflow-hidden hover:rotate-0 transition-transform duration-500 hover:shadow-glow-pink-strong">
                     <!-- Profile Image Carousel -->
-                    <div class="w-full h-full rounded-[2.5rem] bg-dark flex items-center justify-center border border-pink/10 overflow-hidden relative">
-                        <img id="profile-img" src="assets/profil1.JPG" alt="Nadia Profile" class="w-full h-full object-cover transition-opacity duration-300 ease-in-out">
+                    <div
+                        class="w-full h-full rounded-[2.5rem] bg-dark flex items-center justify-center border border-pink/10 overflow-hidden relative">
+                        <img id="profile-img" src="assets/profil1.JPG" alt="Nadia Profile"
+                            class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -143,59 +210,101 @@
         <!-- Skills Section -->
         <section id="skills" class="max-w-6xl mx-auto px-6 py-20 relative">
             <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
-                <i class="fas fa-toolbox text-pink"></i> 
+                <i class="fas fa-toolbox text-pink"></i>
                 <span class="lang-en">Skills & Tools</span><span class="lang-id">Keahlian & Alat</span>
             </h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- System Design -->
-                <div class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                <div
+                    class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                     <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">System Design</h3>
                     <div class="grid grid-cols-3 gap-4">
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-project-diagram text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Draw.io</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-sitemap text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Visual Paradigm</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-figma-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Figma</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-project-diagram text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Draw.io</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-sitemap text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Visual Paradigm</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-figma-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Figma</span></div>
                     </div>
                 </div>
-                
+
                 <!-- Development & Env -->
-                <div class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                <div
+                    class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                     <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Development & Env</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-vscode-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">VS Code</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-intellij-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">IntelliJ</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-java-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">NetBeans</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-server text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Laragon</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-vscode-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">VS Code</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-intellij-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">IntelliJ</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-java-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">NetBeans</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-server text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Laragon</span></div>
                     </div>
                 </div>
 
                 <!-- DB & API -->
-                <div class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                <div
+                    class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                     <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Database & API</h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-oracle-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">SQL Developer</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-postman-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Postman</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-oracle-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">SQL Developer</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-postman-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Postman</span></div>
                     </div>
                 </div>
 
                 <!-- Collaboration & Workspace -->
-                <div class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink md:col-span-2">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Collaboration & Workspace</h3>
+                <div
+                    class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink md:col-span-2">
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Collaboration & Workspace
+                    </h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-book-open text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Notion</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-tasks text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">ClickUp</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-github-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">GitHub</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-google-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Google Workspace</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="fab fa-microsoft text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">MS Office</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-book-open text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Notion</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-tasks text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">ClickUp</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-github-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">GitHub</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-google-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Google Workspace</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fab fa-microsoft text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">MS Office</span></div>
                     </div>
                 </div>
 
                 <!-- Others -->
-                <div class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                <div
+                    class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                     <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Others</h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="flex flex-col items-center gap-2 group"><i class="fas fa-rocket text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Antigravity</span></div>
-                        <div class="flex flex-col items-center gap-2 group"><i class="devicon-canva-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span class="text-xs text-center text-gray-400 group-hover:text-white">Canva</span></div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="fas fa-rocket text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Antigravity</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 group"><i
+                                class="devicon-canva-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
+                                class="text-xs text-center text-gray-400 group-hover:text-white">Canva</span></div>
                     </div>
                 </div>
             </div>
@@ -204,77 +313,114 @@
         <!-- Projects Section -->
         <section id="projects" class="max-w-6xl mx-auto px-6 py-20 relative">
             <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
-                <i class="fas fa-code-branch text-pink"></i> 
+                <i class="fas fa-code-branch text-pink"></i>
                 <span class="lang-en">Featured System Designs</span><span class="lang-id">Desain Sistem Unggulan</span>
             </h2>
-            
+
             <div class="space-y-8">
                 <!-- Project 1 -->
-                <div class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 group">
-                    <div class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
+                <div
+                    class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 group">
+                    <div
+                        class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
                         <!-- Mockup illustration (Wireframe aesthetic) -->
-                        <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]"></div>
-                        <div class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]">
+                        </div>
+                        <div
+                            class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
                             <div class="w-full h-8 border-b-2 border-pink/30 flex items-center gap-2 pb-2">
                                 <div class="w-3 h-3 rounded-full bg-red/80"></div>
                                 <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                                 <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
                             </div>
                             <div class="flex-1 flex items-center justify-center gap-4 py-4">
-                                <div class="w-16 h-16 border-2 border-dashed border-pink/50 rounded-lg flex items-center justify-center"><i class="fas fa-user text-pink/50"></i></div>
+                                <div
+                                    class="w-16 h-16 border-2 border-dashed border-pink/50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-user text-pink/50"></i>
+                                </div>
                                 <i class="fas fa-arrow-right text-pink/30"></i>
-                                <div class="w-16 h-16 border-2 border-pink/50 rounded-lg flex items-center justify-center"><i class="fas fa-database text-pink/50"></i></div>
+                                <div
+                                    class="w-16 h-16 border-2 border-pink/50 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-database text-pink/50"></i>
+                                </div>
                             </div>
                             <div class="w-full h-4 bg-pink/10 rounded"></div>
                         </div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 lg:p-10 flex flex-col justify-center">
                         <div class="flex gap-2 mb-4">
-                            <span class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">Desktop App</span>
-                            <span class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">UML Design</span>
+                            <span
+                                class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">Desktop
+                                App</span>
+                            <span
+                                class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">UML
+                                Design</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">Laundry Bu Yanti</h3>
+                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">Laundry
+                            Bu Yanti</h3>
                         <p class="text-gray-400 mb-6 leading-relaxed">
-                            <span class="lang-en">Designed comprehensive user flows and ensured data consistency using Activity and Sequence Diagrams for a local laundry business desktop application.</span>
-                            <span class="lang-id">Merancang alur pengguna yang komprehensif dan memastikan konsistensi data menggunakan Activity dan Sequence Diagram untuk aplikasi desktop bisnis laundry lokal.</span>
+                            <span class="lang-en">Designed comprehensive user flows and ensured data consistency using
+                                Activity and Sequence Diagrams for a local laundry business desktop application.</span>
+                            <span class="lang-id">Merancang alur pengguna yang komprehensif dan memastikan konsistensi
+                                data menggunakan Activity dan Sequence Diagram untuk aplikasi desktop bisnis laundry
+                                lokal.</span>
                         </p>
-                        <a href="#" class="inline-flex items-center gap-2 text-pink hover:text-red font-medium transition-colors w-max">
-                            <span class="lang-en">View Design Specs</span><span class="lang-id">Lihat Spesifikasi Desain</span> <i class="fas fa-external-link-alt text-sm"></i>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-pink hover:text-red font-medium transition-colors w-max">
+                            <span class="lang-en">View Design Specs</span><span class="lang-id">Lihat Spesifikasi
+                                Desain</span> <i class="fas fa-external-link-alt text-sm"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse transition-all duration-300 group">
-                    <div class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-l border-white/5">
-                         <!-- Mockup illustration -->
-                        <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]"></div>
-                        <div class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
-                             <div class="flex justify-between items-center mb-4 border-b-2 border-pink/20 pb-2">
+                <div
+                    class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse transition-all duration-300 group">
+                    <div
+                        class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-l border-white/5">
+                        <!-- Mockup illustration -->
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]">
+                        </div>
+                        <div
+                            class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
+                            <div class="flex justify-between items-center mb-4 border-b-2 border-pink/20 pb-2">
                                 <div class="w-10 h-3 bg-pink/20 rounded"></div>
                                 <div class="flex gap-2">
                                     <div class="w-4 h-4 rounded bg-pink/20"></div>
                                     <div class="w-4 h-4 rounded bg-pink/20"></div>
                                 </div>
-                             </div>
-                             <div class="grid grid-cols-2 gap-3 flex-1">
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 flex-1">
                                 <div class="border-2 border-pink/20 rounded bg-pink/5"></div>
                                 <div class="border-2 border-pink/20 rounded bg-pink/5"></div>
-                             </div>
+                            </div>
                         </div>
                     </div>
                     <div class="w-full md:w-7/12 p-8 lg:p-10 flex flex-col justify-center">
                         <div class="flex gap-2 mb-4">
-                            <span class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">Web Marketplace</span>
-                            <span class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">System Analyst</span>
+                            <span
+                                class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">Web
+                                Marketplace</span>
+                            <span
+                                class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">System
+                                Analyst</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">SPPGIndonesia.com</h3>
+                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">
+                            SPPGIndonesia.com</h3>
                         <p class="text-gray-400 mb-6 leading-relaxed">
-                            <span class="lang-en">Served as System Analyst & Blueprint Designer in an educational partnership with PT Krisna Ardhi Tama for the MBG Program. Focused on system scalability and quality architecture.</span>
-                            <span class="lang-id">Berperan sebagai System Analyst & Blueprint Designer dalam kemitraan pendidikan dengan PT Krisna Ardhi Tama untuk Program MBG. Fokus pada skalabilitas sistem dan kualitas arsitektur.</span>
+                            <span class="lang-en">Served as System Analyst & Blueprint Designer in an educational
+                                partnership with PT Krisna Ardhi Tama for the MBG Program. Focused on system scalability
+                                and quality architecture.</span>
+                            <span class="lang-id">Berperan sebagai System Analyst & Blueprint Designer dalam kemitraan
+                                pendidikan dengan PT Krisna Ardhi Tama untuk Program MBG. Fokus pada skalabilitas sistem
+                                dan kualitas arsitektur.</span>
                         </p>
-                        <a href="#" class="inline-flex items-center gap-2 text-pink hover:text-red font-medium transition-colors w-max">
-                            <span class="lang-en">View Architecture</span><span class="lang-id">Lihat Arsitektur</span> <i class="fas fa-external-link-alt text-sm"></i>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-pink hover:text-red font-medium transition-colors w-max">
+                            <span class="lang-en">View Architecture</span><span class="lang-id">Lihat Arsitektur</span>
+                            <i class="fas fa-external-link-alt text-sm"></i>
                         </a>
                     </div>
                 </div>
@@ -293,107 +439,159 @@
             </div>
 
             <div class="relative border-l-2 border-pink/20 ml-3 md:ml-6 space-y-12 pb-8">
-                
+
                 <!-- Item 1 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Business Analyst</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Digdaya X Hackathon Bank Indonesia 2026 & APAC Solution Challenge</h3>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Business
+                            Analyst</span>
+                        <h3 class="text-lg font-bold text-white mb-1">Digdaya X Hackathon Bank Indonesia 2026 & APAC
+                            Solution Challenge</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Collaborated with developers to align business logic with technical execution, ensuring software quality and market viability.</span>
-                            <span class="lang-id">Berkolaborasi dengan developer untuk menyelaraskan logika bisnis dengan eksekusi teknis, memastikan kualitas perangkat lunak dan kelayakan pasar.</span>
+                            <span class="lang-en">Collaborated with developers to align business logic with technical
+                                execution, ensuring software quality and market viability.</span>
+                            <span class="lang-id">Berkolaborasi dengan developer untuk menyelaraskan logika bisnis
+                                dengan eksekusi teknis, memastikan kualitas perangkat lunak dan kelayakan pasar.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">System Analyst & Designer</span>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">System Analyst &
+                            Designer</span>
                         <h3 class="text-lg font-bold text-white mb-1">Industry Partner Project - SPPGIndonesia.com</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Designed comprehensive blueprints and system workflows for a web marketplace targeting the MBG Program.</span>
-                            <span class="lang-id">Merancang cetak biru komprehensif dan alur sistem untuk web marketplace yang menargetkan Program MBG.</span>
+                            <span class="lang-en">Designed comprehensive blueprints and system workflows for a web
+                                marketplace targeting the MBG Program.</span>
+                            <span class="lang-id">Merancang cetak biru komprehensif dan alur sistem untuk web
+                                marketplace yang menargetkan Program MBG.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Project Lead</span>
-                        <h3 class="text-lg font-bold text-white mb-1">SIJATIRA-IoT Automated Oyster Mushroom Watering System</h3>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Project
+                            Lead</span>
+                        <h3 class="text-lg font-bold text-white mb-1">SIJATIRA-IoT Automated Oyster Mushroom Watering
+                            System</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Led the development of an IoT-based system to automate watering, managing both hardware integration and software reliability.</span>
-                            <span class="lang-id">Memimpin pengembangan sistem berbasis IoT untuk otomatisasi penyiraman, mengelola integrasi perangkat keras dan keandalan perangkat lunak.</span>
+                            <span class="lang-en">Led the development of an IoT-based system to automate watering,
+                                managing both hardware integration and software reliability.</span>
+                            <span class="lang-id">Memimpin pengembangan sistem berbasis IoT untuk otomatisasi
+                                penyiraman, mengelola integrasi perangkat keras dan keandalan perangkat lunak.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Lead UX Researcher</span>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Lead UX
+                            Researcher</span>
                         <h3 class="text-lg font-bold text-white mb-1">SEVENT 9.0 UI/UX Competition</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Conducted user research to design intuitive and accessible interfaces, focusing on user-centered design principles.</span>
-                            <span class="lang-id">Melakukan riset pengguna untuk merancang antarmuka yang intuitif dan mudah diakses, berfokus pada prinsip desain yang berpusat pada pengguna.</span>
+                            <span class="lang-en">Conducted user research to design intuitive and accessible interfaces,
+                                focusing on user-centered design principles.</span>
+                            <span class="lang-id">Melakukan riset pengguna untuk merancang antarmuka yang intuitif dan
+                                mudah diakses, berfokus pada prinsip desain yang berpusat pada pengguna.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Participant</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Datavidia 10 Data Mining ITB (Weighted Ensemble Learning)</h3>
+                        <h3 class="text-lg font-bold text-white mb-1">Datavidia 10 Data Mining ITB (Weighted Ensemble
+                            Learning)</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Applied weighted ensemble learning techniques in a competitive data mining environment.</span>
-                            <span class="lang-id">Menerapkan teknik weighted ensemble learning dalam lingkungan data mining yang kompetitif.</span>
+                            <span class="lang-en">Applied weighted ensemble learning techniques in a competitive data
+                                mining environment.</span>
+                            <span class="lang-id">Menerapkan teknik weighted ensemble learning dalam lingkungan data
+                                mining yang kompetitif.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Practicum Assistant (Completed)</span>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Practicum
+                            Assistant (Completed)</span>
                         <h3 class="text-lg font-bold text-white mb-1">Object-Oriented Programming (OOP)</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Guided students through core OOP concepts, code reviews, and debugging, ensuring high code quality standards.</span>
-                            <span class="lang-id">Membimbing mahasiswa mengenai konsep inti OOP, code review, dan debugging, memastikan standar kualitas kode yang tinggi.</span>
+                            <span class="lang-en">Guided students through core OOP concepts, code reviews, and
+                                debugging, ensuring high code quality standards.</span>
+                            <span class="lang-id">Membimbing mahasiswa mengenai konsep inti OOP, code review, dan
+                                debugging, memastikan standar kualitas kode yang tinggi.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 7 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Student Intern</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Career Development Center (CDC) Tel-U Purwokerto</h3>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Student
+                            Intern</span>
+                        <h3 class="text-lg font-bold text-white mb-1">Career Development Center (CDC) Tel-U Purwokerto
+                        </h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Managed administrative tasks and optimized data organization for career development programs.</span>
-                            <span class="lang-id">Mengelola tugas administratif dan mengoptimalkan organisasi data untuk program pengembangan karir kampus.</span>
+                            <span class="lang-en">Managed administrative tasks and optimized data organization for
+                                career development programs.</span>
+                            <span class="lang-id">Mengelola tugas administratif dan mengoptimalkan organisasi data untuk
+                                program pengembangan karir kampus.</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 8 -->
                 <div class="relative pl-8 group">
-                    <div class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all"></div>
-                    <div class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">MC & Event Specialist</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Public Speaking (GDGOC Skill Camp, SEVENT, BEM KEMA)</h3>
+                    <div
+                        class="absolute w-4 h-4 bg-dark border-2 border-pink rounded-full -left-[9px] top-1.5 group-hover:bg-pink group-hover:shadow-glow-pink transition-all">
+                    </div>
+                    <div
+                        class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
+                        <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">MC & Event
+                            Specialist</span>
+                        <h3 class="text-lg font-bold text-white mb-1">Public Speaking (GDGOC Skill Camp, SEVENT, BEM
+                            KEMA)</h3>
                         <p class="text-sm text-gray-400 mt-2">
-                            <span class="lang-en">Demonstrated strong communication and leadership by hosting major campus technical and organizational events.</span>
-                            <span class="lang-id">Menunjukkan komunikasi dan kepemimpinan yang kuat dengan menjadi pembawa acara untuk berbagai acara teknis dan organisasi kampus.</span>
+                            <span class="lang-en">Demonstrated strong communication and leadership by hosting major
+                                campus technical and organizational events.</span>
+                            <span class="lang-id">Menunjukkan komunikasi dan kepemimpinan yang kuat dengan menjadi
+                                pembawa acara untuk berbagai acara teknis dan organisasi kampus.</span>
                         </p>
                     </div>
                 </div>
@@ -406,31 +604,37 @@
     <!-- Footer -->
     <footer class="bg-card border-t border-white/5 pt-16 pb-8 mt-12 relative z-10">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
-            
+
             <h2 class="text-2xl font-bold mb-8 text-center">
                 <span class="lang-en">Let's build <span class="text-pink">reliable software</span> together! ✧</span>
-                <span class="lang-id">Mari bangun <span class="text-pink">perangkat lunak reliabel</span> bersama! ✧</span>
+                <span class="lang-id">Mari bangun <span class="text-pink">perangkat lunak reliabel</span> bersama!
+                    ✧</span>
             </h2>
 
             <div class="flex gap-6 mb-12">
-                <a href="mailto:nadiatmbunan@gmail.com" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-red hover:shadow-glow-red transition-all duration-300">
+                <a href="mailto:nadiatmbunan@gmail.com"
+                    class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-red hover:shadow-glow-red transition-all duration-300">
                     <i class="fas fa-envelope text-lg"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/nadiatambunan2622/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
+                <a href="https://www.linkedin.com/in/nadiatambunan2622/" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
                     <i class="fab fa-linkedin-in text-lg"></i>
                 </a>
-                <a href="https://github.com/nadia2622" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
+                <a href="https://github.com/nadia2622" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
                     <i class="fab fa-github text-lg"></i>
                 </a>
-                <a href="https://www.instagram.com/n.tambun/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
+                <a href="https://www.instagram.com/n.tambun/" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink hover:shadow-glow-pink transition-all duration-300">
                     <i class="fab fa-instagram text-lg"></i>
                 </a>
             </div>
 
             <div class="w-full h-px bg-white/5 mb-8"></div>
-            
+
             <p class="text-sm text-gray-500 font-medium text-center">
-                &copy; 2026 Nadia Tambunan. <span class="lang-en">All rights reserved.</span><span class="lang-id">Hak cipta dilindungi.</span>
+                &copy; 2026 Nadia Tambunan. <span class="lang-en">All rights reserved.</span><span class="lang-id">Hak
+                    cipta dilindungi.</span>
             </p>
         </div>
     </footer>
@@ -444,36 +648,27 @@
             'assets/profil3.JPG'
         ];
         let currentImgIdx = 0;
-        
+
         function rotateProfileImage() {
             const imgEl = document.getElementById('profile-img');
             if (imgEl) {
-                // Fade out
-                imgEl.style.opacity = 0;
-                
-                setTimeout(() => {
-                    // Change image after fade out
-                    currentImgIdx = (currentImgIdx + 1) % profileImages.length;
-                    imgEl.src = profileImages[currentImgIdx];
-                    
-                    // Fade in
-                    imgEl.style.opacity = 1;
-                }, 300); // 300ms matches the CSS transition duration
+                currentImgIdx = (currentImgIdx + 1) % profileImages.length;
+                imgEl.src = profileImages[currentImgIdx];
             }
         }
-        
+
         // Rotate every 1 second (1000ms)
         setInterval(rotateProfileImage, 1000);
 
         // Language Switcher
         let isId = false; // Default language is English (false)
-        
+
         function toggleLang() {
             isId = !isId;
             const knob = document.getElementById('lang-toggle-knob');
             const indicator = document.getElementById('lang-indicator');
-            
-            if(isId) {
+
+            if (isId) {
                 // Switch to ID
                 document.body.classList.add('is-id');
                 knob.style.transform = 'translateX(24px)';
@@ -491,4 +686,5 @@
         }
     </script>
 </body>
+
 </html>
