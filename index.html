@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nadia Tambunan | Software Engineering & SQA</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png?v=2">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -326,30 +326,9 @@
                     class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 group">
                     <div
                         class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
-                        <!-- Mockup illustration (Wireframe aesthetic) -->
-                        <div
-                            class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]">
-                        </div>
-                        <div
-                            class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
-                            <div class="w-full h-8 border-b-2 border-pink/30 flex items-center gap-2 pb-2">
-                                <div class="w-3 h-3 rounded-full bg-red/80"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            </div>
-                            <div class="flex-1 flex items-center justify-center gap-4 py-4">
-                                <div
-                                    class="w-16 h-16 border-2 border-dashed border-pink/50 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-user text-pink/50"></i>
-                                </div>
-                                <i class="fas fa-arrow-right text-pink/30"></i>
-                                <div
-                                    class="w-16 h-16 border-2 border-pink/50 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-database text-pink/50"></i>
-                                </div>
-                            </div>
-                            <div class="w-full h-4 bg-pink/10 rounded"></div>
-                        </div>
+                        <!-- Project Image -->
+                        <img src="assets/buyanti.png" alt="Laundry Bu Yanti"
+                            class="w-full h-48 object-cover object-top rounded-xl z-10 group-hover:scale-105 transition-transform duration-500 shadow-lg border border-pink/20">
                     </div>
                     <div class="w-full md:w-7/12 p-8 lg:p-10 flex flex-col justify-center">
                         <div class="flex gap-2 mb-4">
@@ -382,24 +361,9 @@
                     class="bg-card border border-white/5 hover:border-pink/30 hover:shadow-glow-pink hover:-translate-y-1 rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse transition-all duration-300 group">
                     <div
                         class="w-full md:w-5/12 bg-dark p-8 flex items-center justify-center relative overflow-hidden border-b md:border-b-0 md:border-l border-white/5">
-                        <!-- Mockup illustration -->
-                        <div
-                            class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI0YzQzVDNSIvPjwvc3ZnPg==')]">
-                        </div>
-                        <div
-                            class="w-full h-48 border-2 border-pink/30 rounded-xl relative flex flex-col justify-between p-4 bg-card z-10 group-hover:scale-105 transition-transform duration-500">
-                            <div class="flex justify-between items-center mb-4 border-b-2 border-pink/20 pb-2">
-                                <div class="w-10 h-3 bg-pink/20 rounded"></div>
-                                <div class="flex gap-2">
-                                    <div class="w-4 h-4 rounded bg-pink/20"></div>
-                                    <div class="w-4 h-4 rounded bg-pink/20"></div>
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-3 flex-1">
-                                <div class="border-2 border-pink/20 rounded bg-pink/5"></div>
-                                <div class="border-2 border-pink/20 rounded bg-pink/5"></div>
-                            </div>
-                        </div>
+                        <!-- Project Image -->
+                        <img src="assets/SPPGIndonesia.png" alt="SPPG Indonesia"
+                            class="w-full h-48 object-cover object-top rounded-xl z-10 group-hover:scale-105 transition-transform duration-500 shadow-lg border border-pink/20">
                     </div>
                     <div class="w-full md:w-7/12 p-8 lg:p-10 flex flex-col justify-center">
                         <div class="flex gap-2 mb-4">
@@ -642,6 +606,17 @@
         </div>
     </footer>
 
+    <!-- AOS Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+
+    <!-- JavaScript for Interactions -->
     <!-- AOS Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
