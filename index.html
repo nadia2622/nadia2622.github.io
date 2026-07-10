@@ -92,15 +92,36 @@
         .delay-2 {
             animation-delay: 2s;
         }
+    
+        /* Spotlight Effect */
+        .spotlight-text {
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background: radial-gradient(circle 120px at var(--x, -1000px) var(--y, -1000px), #C93B3B 0%, transparent 100%), #f9fafb;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .global-spotlight {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle 400px at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(243, 197, 197, 0.07), transparent 100%);
+        }
     </style>
 </head>
 
 <body class="antialiased selection:bg-pink selection:text-dark">
+    <div id="global-spotlight" class="global-spotlight"></div>
 
     <!-- Sparkle Vectors (Background) -->
-    <div class="fixed top-20 left-10 text-pink/40 star-sparkle text-2xl pointer-events-none z-0">✦</div>
-    <div class="fixed top-40 right-20 text-pink/40 star-sparkle delay-1 text-3xl pointer-events-none z-0">✧</div>
-    <div class="fixed bottom-20 left-32 text-pink/30 star-sparkle delay-2 text-xl pointer-events-none z-0">✦</div>
+    <div class="fixed top-20 left-10 text-pink/40 star-sparkle text-2xl pointer-events-none z-0">✿</div>
+    <div class="fixed top-40 right-20 text-pink/40 star-sparkle delay-1 text-3xl pointer-events-none z-0">❀</div>
+    <div class="fixed bottom-20 left-32 text-pink/30 star-sparkle delay-2 text-xl pointer-events-none z-0">✿</div>
 
     <!-- Header -->
     <header class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-card transition-all">
@@ -158,13 +179,9 @@
                     </span>
                 </div>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    <span class="lang-en">Hi, I'm Nadia Tambunan! Welcome to my <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">software
-                            engineering</span> journey. ✧</span>
-                    <span class="lang-id">Halo, aku Nadia Tambunan! Yuk, jelajahi perjalananku di dunia <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-red">Rekayasa Perangkat
-                            Lunak</span>. ✧</span>
+                <h1 id="hero-headline" class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight pb-2 spotlight-text">
+                    <span class="lang-en">Hi, I'm Nadia Tambunan! Welcome to my software engineering journey. ❀</span>
+                    <span class="lang-id">Halo, aku Nadia Tambunan! Yuk, jelajahi perjalananku di dunia Rekayasa Perangkat Lunak. ❀</span>
                 </h1>
 
                 <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
@@ -197,8 +214,8 @@
 
             <div class="w-full md:w-2/5 flex justify-center relative" data-aos="fade-left" data-aos-delay="200">
                 <!-- Decorative Elements -->
-                <div class="absolute top-0 right-10 text-pink text-2xl star-sparkle">✦</div>
-                <div class="absolute bottom-10 left-0 text-pink text-xl star-sparkle delay-1">✧</div>
+                <div class="absolute top-0 right-10 text-pink text-2xl star-sparkle">✿</div>
+                <div class="absolute bottom-10 left-0 text-pink text-xl star-sparkle delay-1">❀</div>
 
                 <div
                     class="w-64 h-64 md:w-80 md:h-80 bg-card rounded-[3rem] rotate-3 border-2 border-pink/20 relative p-4 flex items-center justify-center overflow-hidden hover:rotate-0 transition-transform duration-500 hover:shadow-glow-pink-strong">
@@ -215,12 +232,12 @@
         <!-- Education Section -->
         <section id="education" class="max-w-4xl mx-auto px-6 py-20 relative">
             <div class="text-center mb-16 relative" data-aos="fade-up">
-                <h2 class="text-3xl font-bold inline-flex items-center gap-3">
+                <h2 class="text-3xl font-bold inline-flex items-center gap-3 spotlight-text">
                     <i class="fas fa-graduation-cap text-pink"></i>
                     <span class="lang-en">Education</span><span class="lang-id">Pendidikan</span>
                 </h2>
-                <div class="absolute top-1/2 left-[20%] text-pink star-sparkle">✦</div>
-                <div class="absolute top-0 right-[20%] text-pink star-sparkle delay-2">✧</div>
+                <div class="absolute top-1/2 left-[20%] text-pink star-sparkle">✿</div>
+                <div class="absolute top-0 right-[20%] text-pink star-sparkle delay-2">❀</div>
             </div>
 
             <div class="relative border-l-2 border-pink/20 ml-3 md:ml-6 space-y-12 pb-8">
@@ -237,7 +254,7 @@
                         <div>
                             <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">2024 - <span
                                     class="lang-en">Present</span><span class="lang-id">Sekarang</span></span>
-                            <h3 class="text-lg font-bold text-white mb-1">Telkom University Purwokerto</h3>
+                            <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Telkom University Purwokerto</h3>
                             <h4 class="text-md text-gray-300 font-medium"><span class="lang-en">Software Engineering
                                     Undergraduate (S1)</span><span class="lang-id">S1 Rekayasa Perangkat Lunak</span>
                             </h4>
@@ -257,7 +274,7 @@
                         <div>
                             <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">2021 -
                                 2024</span>
-                            <h3 class="text-lg font-bold text-white mb-1">PKPPS Salafiyah Ulya Ma'had Al-Faruq,
+                            <h3 class="text-lg font-bold text-white mb-1 spotlight-text">PKPPS Salafiyah Ulya Ma'had Al-Faruq,
                                 Karanglewas</h3>
                             <h4 class="text-md text-gray-300 font-medium"><span class="lang-en">Social Sciences
                                     (IPS)</span><span class="lang-id">Ilmu Pengetahuan Sosial (IPS)</span></h4>
@@ -270,7 +287,7 @@
 
         <!-- Skills Section -->
         <section id="skills" class="max-w-6xl mx-auto px-6 py-20 relative" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+            <h2 class="text-3xl font-bold mb-10 flex items-center gap-3 spotlight-text">
                 <i class="fas fa-toolbox text-pink"></i>
                 <span class="lang-en">Skills & Tools</span><span class="lang-id">Keahlian & Alat</span>
             </h2>
@@ -279,7 +296,7 @@
                 <!-- System Design -->
                 <div
                     class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">System Design</h3>
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider spotlight-text">System Design</h3>
                     <div class="grid grid-cols-3 gap-4">
                         <div class="flex flex-col items-center gap-2 group"><i
                                 class="fas fa-project-diagram text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
@@ -297,7 +314,7 @@
                 <!-- Development & Env -->
                 <div
                     class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Development & Env</h3>
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider spotlight-text">Development & Env</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         <div class="flex flex-col items-center gap-2 group"><i
                                 class="devicon-vscode-plain text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
@@ -317,7 +334,7 @@
                 <!-- DB & API -->
                 <div
                     class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Database & API</h3>
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider spotlight-text">Database & API</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="flex flex-col items-center gap-2 group"><i
                                 class="devicon-oracle-original text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
@@ -332,7 +349,7 @@
                 <!-- Collaboration & Workspace -->
                 <div
                     class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink md:col-span-2">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Collaboration & Workspace
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider spotlight-text">Collaboration & Workspace
                     </h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                         <div class="flex flex-col items-center gap-2 group"><i
@@ -357,7 +374,7 @@
                 <!-- Others -->
                 <div
                     class="bg-card p-6 rounded-3xl border border-white/5 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
-                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider">Others</h3>
+                    <h3 class="text-pink text-sm font-semibold mb-4 uppercase tracking-wider spotlight-text">Others</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="flex flex-col items-center gap-2 group"><i
                                 class="fas fa-rocket text-2xl text-gray-400 group-hover:text-pink transition-colors"></i><span
@@ -373,7 +390,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="max-w-6xl mx-auto px-6 py-20 relative" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+            <h2 class="text-3xl font-bold mb-10 flex items-center gap-3 spotlight-text">
                 <i class="fas fa-code-branch text-pink"></i>
                 <span class="lang-en">Projects</span><span class="lang-id">Proyek</span>
             </h2>
@@ -397,7 +414,7 @@
                                 class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">UML
                                 Design</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">Laundry
+                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors spotlight-text">Laundry
                             Bu Yanti</h3>
                         <p class="text-gray-400 mb-6 leading-relaxed">
                             <span class="lang-en">Designed comprehensive user flows and ensured data consistency using
@@ -432,7 +449,7 @@
                                 class="text-xs font-bold px-3 py-1 bg-pink/10 text-pink rounded-full border border-pink/20">System
                                 Analyst</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors">
+                        <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-pink transition-colors spotlight-text">
                             SPPGIndonesia</h3>
                         <p class="text-gray-400 mb-6 leading-relaxed">
                             <span class="lang-en">Served as System Analyst & Blueprint Designer in an educational
@@ -455,12 +472,12 @@
         <!-- Experience Timeline Section -->
         <section id="experience" class="max-w-4xl mx-auto px-6 py-20 relative">
             <div class="text-center mb-16 relative">
-                <h2 class="text-3xl font-bold inline-flex items-center gap-3">
-                    <i class="fas fa-star text-pink"></i>
+                <h2 class="text-3xl font-bold inline-flex items-center gap-3 spotlight-text">
+                    <i class="fas fa-asterisk text-pink"></i>
                     <span class="lang-en">My Journey</span><span class="lang-id">Perjalanan Karir</span>
                 </h2>
-                <div class="absolute top-1/2 left-[20%] text-pink star-sparkle">✦</div>
-                <div class="absolute top-0 right-[20%] text-pink star-sparkle delay-2">✧</div>
+                <div class="absolute top-1/2 left-[20%] text-pink star-sparkle">✿</div>
+                <div class="absolute top-0 right-[20%] text-pink star-sparkle delay-2">❀</div>
             </div>
 
             <div class="relative border-l-2 border-pink/20 ml-3 md:ml-6 space-y-12 pb-8">
@@ -474,7 +491,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Business
                             Analyst</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Digdaya X Hackathon Bank Indonesia 2026 & APAC
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Digdaya X Hackathon Bank Indonesia 2026 & APAC
                             Solution Challenge</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Collaborated with developers to align business logic with technical
@@ -494,7 +511,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">System Analyst &
                             Designer</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Industry Partner Project - SPPGIndonesia.com</h3>
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Industry Partner Project - SPPGIndonesia.com</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Designed comprehensive blueprints and system workflows for a web
                                 marketplace targeting the MBG Program.</span>
@@ -513,7 +530,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Project
                             Lead</span>
-                        <h3 class="text-lg font-bold text-white mb-1">SIJATIRA-IoT Automated Oyster Mushroom Watering
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">SIJATIRA-IoT Automated Oyster Mushroom Watering
                             System</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Led the development of an IoT-based system to automate watering,
@@ -533,7 +550,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Lead UX
                             Researcher</span>
-                        <h3 class="text-lg font-bold text-white mb-1">SEVENT 9.0 UI/UX Competition</h3>
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">SEVENT 9.0 UI/UX Competition</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Conducted user research to design intuitive and accessible interfaces,
                                 focusing on user-centered design principles.</span>
@@ -551,7 +568,7 @@
                     <div
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Participant</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Datavidia 10 Data Mining ITB (Weighted Ensemble
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Datavidia 10 Data Mining ITB (Weighted Ensemble
                             Learning)</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Applied weighted ensemble learning techniques in a competitive data
@@ -571,7 +588,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Practicum
                             Assistant (Completed)</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Object-Oriented Programming (OOP)</h3>
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Object-Oriented Programming (OOP)</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Guided students through core OOP concepts, code reviews, and
                                 debugging, ensuring high code quality standards.</span>
@@ -590,7 +607,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">Student
                             Intern</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Career Development Center (CDC) Tel-U Purwokerto
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Career Development Center (CDC) Tel-U Purwokerto
                         </h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Managed administrative tasks and optimized data organization for
@@ -610,7 +627,7 @@
                         class="bg-card p-6 rounded-2xl border border-white/5 hover:border-pink/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-pink">
                         <span class="text-pink text-xs font-bold uppercase tracking-wider mb-2 block">MC & Event
                             Specialist</span>
-                        <h3 class="text-lg font-bold text-white mb-1">Public Speaking (GDGOC Skill Camp, SEVENT, BEM
+                        <h3 class="text-lg font-bold text-white mb-1 spotlight-text">Public Speaking (GDGOC Skill Camp, SEVENT, BEM
                             KEMA)</h3>
                         <p class="text-sm text-gray-400 mt-2">
                             <span class="lang-en">Demonstrated strong communication and leadership by hosting major
@@ -636,10 +653,10 @@
     <footer class="bg-card border-t border-white/5 pt-16 pb-8 mt-12 relative z-10">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
 
-            <h2 class="text-2xl font-bold mb-8 text-center">
-                <span class="lang-en">Let's build <span class="text-pink">reliable software</span> together! ✧</span>
+            <h2 class="text-2xl font-bold mb-8 text-center spotlight-text">
+                <span class="lang-en">Let's build <span class="text-pink">reliable software</span> together! ❀</span>
                 <span class="lang-id">Mari bangun <span class="text-pink">perangkat lunak reliabel</span> bersama!
-                    ✧</span>
+                    ❀</span>
             </h2>
 
             <div class="flex gap-6 mb-12">
@@ -682,6 +699,39 @@
 
     <!-- JavaScript for Interactions -->
     <script>
+        
+        // Global Spotlight Hover Effect
+        window.addEventListener('mousemove', (e) => {
+            // Update global background glow
+            const globalSpotlight = document.getElementById('global-spotlight');
+            if (globalSpotlight) {
+                globalSpotlight.style.setProperty('--mouse-x', `${e.clientX}px`);
+                globalSpotlight.style.setProperty('--mouse-y', `${e.clientY}px`);
+            }
+
+            // Update all text spotlights
+            document.querySelectorAll('.spotlight-text').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                el.style.setProperty('--x', `${x}px`);
+                el.style.setProperty('--y', `${y}px`);
+            });
+        });
+        
+        window.addEventListener('mouseleave', () => {
+            const globalSpotlight = document.getElementById('global-spotlight');
+            if (globalSpotlight) {
+                globalSpotlight.style.setProperty('--mouse-x', `-1000px`);
+                globalSpotlight.style.setProperty('--mouse-y', `-1000px`);
+            }
+            document.querySelectorAll('.spotlight-text').forEach(el => {
+                el.style.setProperty('--x', `-1000px`);
+                el.style.setProperty('--y', `-1000px`);
+            });
+        });
+
+
         // Profile Image Carousel
         const profileImages = [
             'assets/profil1.JPG',
